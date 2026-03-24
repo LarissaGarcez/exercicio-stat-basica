@@ -2,7 +2,11 @@
 title: "Exercicios Capitulos 2 e 3"
 author: "Larissa Garcez Ribeiro"
 date: "2026-03-24"
-output: html_document
+output: 
+  pdf_document:
+    keep_tex: false
+knit: (function(inputFile, encoding) {
+  rmarkdown::render(inputFile, encoding = encoding, output_dir = ".") })
 ---
 
 # Capítulo 3 — Reprodutibilidade
@@ -189,11 +193,11 @@ idh %>%
 A estrutura de pastas do projeto foi criada seguindo a convenção recomendada:
 ```
 exercicio-stat-basica/
-├── dados/          # arquivos de dados
-├── scripts/        # scripts R
-├── outputs/        # tabelas e figuras
-├── paper/          # este documento Rmd
-└── README.md       # instruções do projeto
+  dados/          # arquivos de dados
+  scripts/        # scripts R
+  outputs/        # tabelas e figuras
+  paper/          # este documento Rmd
+  README.md       # instrucoes do projeto
 ```
 
 O projeto foi inicializado como repositório Git e o primeiro commit foi realizado com a mensagem "Adiciona estrutura inicial do projeto".
